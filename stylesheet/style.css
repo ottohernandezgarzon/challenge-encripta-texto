@@ -1,0 +1,119 @@
+:root {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #222;
+  --gradient-bottom: linear-gradient(180deg, #142536ff, #51979cff, #182c3eff, #e6a159ff, #8c5a37ff, #efe6dbff, #3f3636ff, #d6c0a3ff, #93928dff, #1c3c50ff);
+
+  --color-primary: #efe6dbff;
+  --color-second: #142536ff;
+  --colo-third:#93928dff;
+  --text-color-primary:#1c3c50ff;
+  --text-color-second:#d6c0a3ff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  display: grid;
+  background-color: var(--color-primary);
+  place-items: center;
+}
+
+header{
+  width: 100%;    
+}
+
+#app {
+  
+  width: 100%;    
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em auto;
+  align-items: center;
+  text-align: center;
+  textarea{
+    width: 80vw;
+    height: 25vh;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    background: var(--color-primary);
+    font: 25px sans-serif;
+    &::placeholder{
+      color: var(--text-color-primary);
+    }
+    &:focus{
+      outline: 2px solid var(--colo-third);
+      border-radius: 1rex;
+    }
+  }
+  
+} 
+
+.logo {
+  align-self: start;
+  
+  height: 6em;
+  will-change: filter;
+  transition: filter 300ms;
+  img{
+    padding: 1.5ex;
+    width: 4rem;
+  }
+}
+
+
+
+.btn__respuesta{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 2rex;
+  button{
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 24rem;
+  }
+  .warning{
+    align-self: start;
+    font-size: 1.5rex;
+    display: flex;
+    align-content:center;
+    img{
+      width: 2ex;
+      margin: auto 1ex  ;
+    }
+  }
+  .encriptar{
+    background-color: var(--color-second);
+    color: var(--text-color-second);
+    font-weight: bolder;
+  }
+  .desencriptar{
+    border: 1px solid var(--color-second);
+    color: var(--text-color-primary);
+    font-weight: bolder;
+
+  }
+}
+.response{
+  width: 85%;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 1ex 1.5rem ;
+  text-align: center;
+  border-radius: 2.5rem;
+  color: var(--text-color-primary);
+}
+
+/* 
+@media () {
+  
+}
+ */

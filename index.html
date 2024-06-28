@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./stylesheet/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <span
+        ><i class="logo"><img src="./image/svg/challenge.svg" alt="" /></i
+      ></span>
+    </header>
+    <main id="app">
+      <form method="post">
+        <textarea
+          name=""
+          id="texto"
+          placeholder="Ingrese el textos aqui"
+        ></textarea>
+      </form>
+      <section class="btn__respuesta">
+        <div class="warning">
+          <img
+          src="/image/png/bi_exclamation-circle-fill.png"
+          alt="exclamation circle fill"
+          />
+          <span class="text__warning">
+            Solo letras minúsculas y sin acentos
+          </span>
+        </div>
+        <button class="encriptar">Encriptar</button>
+        <button class="desencriptar">Desencriptar</button>
+      </section>
+    </main>
+    <aside class="response">
+        <h4 class="subtitle">Ningún mensaje fue encontrado</h4>
+        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+    </aside>
+    <script type="module" src="/javascript/main.js"></script>
+  </body>
+</html>
