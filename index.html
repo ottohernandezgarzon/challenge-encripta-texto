@@ -10,34 +10,36 @@
 
   <body>
     <header class="header">
-      <span
-        ><i class="logo"><img src="./image/svg/challenge.svg" alt="" /></i
-      ></span>
+      <div class="logo">
+        <img src="./image/svg/challenge.svg" alt="" />
+      </div>
     </header>
     <main id="app">
-      <form method="post">
+      <form method="post" id="fm__texto">
         <textarea
-          name=""
+          name="texto"
           id="texto"
           placeholder="Ingrese el textos aqui"
         ></textarea>
       </form>
+      <div class="warning">
+        <img
+        src="/image/png/bi_exclamation-circle-fill.png"
+        alt="exclamation circle fill"
+        />
+        <span class="text__warning">
+          Solo letras minúsculas y sin acentos
+        </span>
+      </div>
       <section class="btn__respuesta">
-        <div class="warning">
-          <img
-          src="/image/png/bi_exclamation-circle-fill.png"
-          alt="exclamation circle fill"
-          />
-          <span class="text__warning">
-            Solo letras minúsculas y sin acentos
-          </span>
-        </div>
         <button class="encriptar">Encriptar</button>
         <button class="desencriptar">Desencriptar</button>
       </section>
     </main>
     <aside class="response">
-        <h4 class="subtitle">Ningún mensaje fue encontrado</h4>
+        <h4 class="subtitle">
+          <strong>Ningún mensaje fue encontrado</strong> 
+        </h4>
         <p>Ingresa el texto que desees encriptar o desencriptar.</p>
     </aside>
     <script type="module" src="/javascript/main.js"></script>
