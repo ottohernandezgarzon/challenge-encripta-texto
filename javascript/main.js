@@ -4,6 +4,7 @@ const $textWarning = document.querySelector(".text__warning")
 const $btnCopiar = document.createElement("button")
 $btnCopiar.textContent = "Copiar"
 $btnCopiar.classList.add(".btn__copiar")
+$btnCopiar.setAttribute("onclick", "copiar()")
 
 /* -------------------------- funciones expresadas -------------------------- */
 const validar = () => {
@@ -28,6 +29,8 @@ function encrypt() {
   valorTexto = valorTexto.replace(/o/mg, "ober")
   valorTexto = valorTexto.replace(/u/mg, "ufat")
   $response.textContent = valorTexto
+  $response.insertAdjacentElement("afterend", $btnCopiar)
+
 }
 
 function decrypt() {
@@ -42,11 +45,9 @@ function decrypt() {
   valorTexto = valorTexto.replace(/ober/mg, "o")
   valorTexto = valorTexto.replace(/ufat/mg, "u")
   $response.textContent = valorTexto
-  $response.insertAdjacentHTML("beforeend", $btnCopiar)
+  $response.insertAdjacentElement("afterend", $btnCopiar)
 };
 
-/* -------------------------------- eventos -------------------------------- */
-$btnCopiar.addEventListener("click", e => {
-  e.preventDefault()
-  e.target.value = $response.textContent
-})
+function copiar() {
+  navigator.clipboard.writeText($response.innerHTML);
+}
